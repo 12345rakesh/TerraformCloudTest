@@ -8,6 +8,14 @@ terraform {
     }
   }
 
+  cloud {
+    organization = "NokiaDevops"
+
+    workspaces {
+      name = "DevopsTerraform"
+    }
+  }
+
 }
 
 
