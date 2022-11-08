@@ -31,6 +31,7 @@ instance_type = "t2.micro"
 key_name = "jenkins"
 
 
+
 tags = {
  Name = "redhat-8"
 
