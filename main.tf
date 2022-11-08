@@ -8,6 +8,7 @@ terraform {
     }
   }
 
+
   cloud {
     organization = "NokiaDevops"
 
