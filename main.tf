@@ -8,12 +8,12 @@ terraform {
     }
   }
 
-provider "ramndom" {}
-
-provider "aws" {
-
-    region = "us-east-1"
 }
+
+provider "aws"  {
+  region = "us-east-1"
+}
+
  cloud {
     organization = "NokiaDevops"
 
@@ -21,4 +21,3 @@ provider "aws" {
       name = "DevopsTerraform"
     }
   }
-}
