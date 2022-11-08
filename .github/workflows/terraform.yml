@@ -52,8 +52,8 @@ jobs:
 
     env:
       ## Sets environment variable
-      AWS_ACCESS_KEY_ID: AKIASJ7YFKCLFY2FWA4Z
-      AWS_SECRET_ACCESS_KEY: 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
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ID }}
       aws-region: us-east-1
 
    
@@ -67,8 +67,7 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
       with:
-        cli_config_credentials_token: DfeCglvoQnEX5A.atlasv1.8VnUexb5tAD40C0wpCK6RzCrfCnZPtEDpRkUVGPsN1WwybbSqto0j7jNyKAOJabDUKA
-
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
